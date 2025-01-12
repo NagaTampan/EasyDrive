@@ -1,0 +1,134 @@
+/* Pengaturan scroll halus untuk seluruh halaman */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Gaya teks dengan gradasi warna */
+.gradient-text {
+    background: linear-gradient(45deg, #2563eb, #1d4ed8); /* Membuat gradasi warna dari biru ke biru tua */
+    -webkit-background-clip: text; /* Menggunakan gradasi sebagai isi teks */
+    -webkit-text-fill-color: transparent; /* Membuat teks transparan sehingga gradasi terlihat */
+}
+
+/* Efek animasi untuk hover pada kartu mobil */
+.car-card {
+    transition: transform 0.3s ease; /* Transisi halus saat kartu dipindahkan */
+}
+
+/* Efek hover: memindahkan kartu ke atas */
+.car-card:hover {
+    transform: translateY(-10px); /* Menggerakkan kartu 10px ke atas saat hover */
+}
+
+/* Efek melayang untuk elemen */
+.floating-element {
+    animation: float 3s ease-in-out infinite; /* Animasi ini akan berulang tanpa henti dengan efek ease-in-out */
+}
+
+/* Keyframe untuk animasi melayang */
+@keyframes float {
+    0% {
+        transform: translateY(0px); /* Posisi awal */
+    }
+    50% {
+        transform: translateY(-20px); /* Bergerak ke atas sejauh 20px di tengah animasi */
+    }
+    100% {
+        transform: translateY(0px); /* Kembali ke posisi semula */
+    }
+}
+
+/* Efek kilauan pada elemen */
+.shine-effect {
+    position: relative;
+    overflow: hidden; /* Menyembunyikan konten yang keluar dari batas elemen */
+}
+
+/* Membuat efek kilauan yang bergerak melintasi elemen */
+.shine-effect::after {
+    content: '';
+    position: absolute;
+    top: -50%; /* Memulai efek kilauan dari luar elemen */
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.1) 50%,
+            transparent 100%); /* Efek kilauan putih bergerak diagonal */
+    transform: rotate(45deg);
+    animation: shine 3s infinite; /* Efek kilauan bergerak tanpa henti */
+}
+
+/* Keyframe untuk animasi kilauan */
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) rotate(45deg); /* Memulai kilauan dari kiri */
+    }
+    100% {
+        transform: translateX(100%) rotate(45deg); /* Menggerakkan kilauan ke kanan */
+    }
+}
+
+/* Efek hover pada kartu: memindahkan kartu ke atas sedikit dan menambah bayangan */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk transformasi dan bayangan */
+}
+
+/* Efek hover: memindahkan kartu ke atas dan menambahkan bayangan */
+.card-hover:hover {
+    transform: translateY(-5px); /* Memindahkan kartu 5px ke atas */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan halus */
+}
+
+/* Efek hover pada ikon: memutar ikon */
+.icon-hover {
+    transition: transform 0.3s ease; /* Transisi halus saat ikon berputar */
+}
+
+/* Efek hover pada ikon: memutar ikon 10 derajat */
+.icon-hover:hover {
+    transform: rotate(10deg); /* Memutar ikon sebesar 10 derajat */
+}
+
+/* Efek kilauan untuk elemen tertentu dengan animasi berbeda */
+.nl-shine-effect {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent); /* Efek kilauan bergerak diagonal */
+    animation: nlShine 8s infinite linear; /* Animasi kilauan bergerak terus-menerus */
+}
+
+/* Keyframe untuk animasi nlShine */
+@keyframes nlShine {
+    0% {
+        left: -100%; /* Memulai kilauan dari tepi kiri */
+    }
+    20% {
+        left: 100%; /* Memindahkan kilauan ke kanan */
+    }
+    100% {
+        left: 100%; /* Menjaga kilauan di sisi kanan */
+    }
+}
+
+/* Animasi bentuk dengan efek melayang */
+.nl-shape-animate {
+    animation: nlFloat 20s infinite linear; /* Animasi melayang yang berulang tanpa henti */
+}
+
+/* Keyframe untuk animasi nlFloat */
+@keyframes nlFloat {
+    0% {
+        transform: translate(0, 0) rotate(0deg); /* Posisi awal dan tidak ada rotasi */
+    }
+    100% {
+        transform: translate(100px, -100px) rotate(360deg); /* Menggerakkan bentuk dan memutarnya */
+    }
+}
