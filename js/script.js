@@ -489,3 +489,65 @@ testimonials.forEach(card => {
            successMessage.classList.add('hidden');
        }
    });
+    // Create timeline
+    const tl = gsap.timeline({ defaults: { duration: 1, ease: 'power2.out' } });
+
+    // Animate content
+    tl.from('.orb-1', { opacity: 0, x: -50, duration: 1.5 })
+      .from('.orb-2', { opacity: 0, x: 50, duration: 1.5 }, '-=1.5')
+      .from('.orb-3', { opacity: 0, y: -50, duration: 1.5 }, '-=1.5')
+      .to('.badge-animate', { opacity: 1, y: -20 }, '-=1')
+      .to('.heading-animate', { opacity: 1, y: -20 }, '-=0.8')
+      .to('.description-animate', { opacity: 1, y: -20 }, '-=0.6')
+      .to('.buttons-animate', { opacity: 1, y: -20 }, '-=0.4')
+      .to('.image-column', { opacity: 1, scale: 1, duration: 1.2 }, '-=1');
+
+    // Animate floating cards on scroll
+    gsap.to('.status-card', {
+        y: 10,
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: 'power1.inOut'
+    });
+
+    gsap.to('.offer-card', {
+        y: -10,
+        duration: 2.5,
+        repeat: -1,
+        yoyo: true,
+        ease: 'power1.inOut'
+    });
+
+    // Create particle animation
+    const createParticle = () => {
+        const particles = document.querySelector('.particles');
+        const particle = document.createElement('div');
+        particle.className = 'particle absolute w-2 h-2 rounded-full';
+        particle.style.left = Math.random() * 100 + 'vw';
+        particle.style.top = Math.random() * 100 + 'vh';
+        particle.style.backgroundColor = `rgba(${Math.random() * 100 + 155}, ${Math.random() * 100 + 155}, 255, ${Math.random() * 0.3 + 0.1})`;
+        particles.appendChild(particle);
+
+        setTimeout(() => {
+            particle.remove();
+        }, 20000);
+    };
+
+    // Create particles periodically
+    setInterval(createParticle, 2000);
+
+    // Animate stats on scroll
+    const stats = document.querySelectorAll('.stat');
+    stats.forEach(stat => {
+        gsap.from(stat, {
+            scrollTrigger: {
+                trigger: stat,
+                start: 'top center+=100',
+                toggleActions: 'play none none reverse'
+            },
+            opacity: 0,
+            y: 20,
+            duration: 0.8
+        });
+    });

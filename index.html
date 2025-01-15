@@ -18,7 +18,7 @@
 
 <body class="font-sans">
 
-    <!--  Navigation -->
+    <!-- Enhanced Navigation -->
     <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 transition-all duration-300">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
@@ -57,133 +57,126 @@
 
     <!-- Hero Section -->
     <section class="hero min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-        <!-- Decorative Elements -->
+        <!-- Animated Background Particles -->
+        <div class="particles absolute inset-0 pointer-events-none">
+            <div class="particle absolute w-2 h-2 bg-blue-400 rounded-full"></div>
+            <div class="particle absolute w-2 h-2 bg-indigo-400 rounded-full"></div>
+            <div class="particle absolute w-2 h-2 bg-purple-400 rounded-full"></div>
+        </div>
+
+        <!-- Gradient Orbs -->
         <div class="absolute inset-0">
-            <div class="absolute top-20 left-10 w-32 h-32 bg-blue-200 rounded-full blur-3xl opacity-30 animate-pulse">
-            </div>
-            <div
-                class="absolute bottom-20 right-10 w-40 h-40 bg-indigo-200 rounded-full blur-3xl opacity-30 animate-pulse">
-            </div>
-            <div
-                class="absolute top-1/3 right-1/4 w-24 h-24 bg-blue-100 rounded-full blur-2xl opacity-40 animate-pulse">
-            </div>
+            <div class="orb-1 absolute top-20 left-10 w-32 h-32 bg-blue-200 rounded-full blur-3xl opacity-30"></div>
+            <div class="orb-2 absolute bottom-20 right-10 w-40 h-40 bg-indigo-200 rounded-full blur-3xl opacity-30"></div>
+            <div class="orb-3 absolute top-1/3 right-1/4 w-24 h-24 bg-purple-200 rounded-full blur-2xl opacity-40"></div>
         </div>
 
         <!-- Grid Pattern -->
-        <div class="absolute inset-0"
-            style="background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0); background-size: 40px 40px;">
+        <div class="absolute inset-0 opacity-[0.03]" 
+             style="background-image: radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0); 
+                    background-size: 30px 30px;">
         </div>
 
         <div class="container mx-auto px-4 relative pt-24 pb-12">
             <div class="grid lg:grid-cols-12 gap-8 items-center">
                 <!-- Content Column -->
-                <div class="lg:col-span-5 space-y-8 z-10">
-                    <div class="inline-block">
-                        <div
-                            class="flex items-center bg-white/80 backdrop-blur-sm rounded-full pl-2 pr-4 py-1 border border-blue-100 mb-6 animate-pulse">
+                <div class="content-column lg:col-span-5 space-y-8 z-10">
+                    <!-- Badge -->
+                    <div class="badge-animate opacity-0">
+                        <div class="inline-flex items-center bg-white/80 backdrop-blur-sm rounded-full pl-2 pr-4 py-1 border border-blue-100">
                             <span class="bg-blue-600 text-white text-sm px-3 py-1 rounded-full mr-2">New</span>
-                            <span class="text-blue-600">Special offer for new customers</span>
+                            <span class="text-blue-600 flex items-center">
+                                Special offer
+                                <i class="fas fa-star text-yellow-400 ml-2 text-sm"></i>
+                            </span>
                         </div>
                     </div>
 
-                    <h1
-                        class="text-5xl lg:text-7xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
-                        Premium Cars
-                        <br />
-                        <span class="text-gray-800">Exceptional Service</span>
+                    <!-- Heading -->
+                    <h1 class="heading-animate opacity-0 text-5xl lg:text-7xl font-extrabold leading-tight">
+                        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
+                            Premium Cars
+                        </span>
+                        <span class="block text-gray-800 mt-2">
+                            Exceptional Service
+                        </span>
                     </h1>
 
-                    <p class="text-xl text-gray-600 max-w-xl">
+                    <!-- Description -->
+                    <p class="description-animate opacity-0 text-xl text-gray-600 max-w-xl">
                         Experience luxury and comfort with our premium fleet. Book in minutes, create memories forever.
                     </p>
 
-                    <div class="flex flex-col sm:flex-row gap-6 pt-6">
-                        <a href="https://wa.me/12345678">
-                            <button
-                                class="group bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition transform hover:scale-105 hover:shadow-2xl flex items-center justify-center">
-                                <span class="flex items-center">
-                                    Book Your Car
-                                    <i
-                                        class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform"></i>
-                                </span>
-                            </button>
-                        </a>
-                        <a href="https://www.youtube.com/">
-                            <button
-                                class="group px-8 py-4 rounded-xl border-2 border-blue-600 hover:bg-blue-50 transition relative overflow-hidden hover:scale-105 hover:shadow-2xl">
-                                <div
-                                    class="absolute inset-0 bg-blue-50 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left">
-                                </div>
-                                <span class="relative z-10 flex items-center justify-center text-blue-600">
-                                    <i class="fas fa-play-circle mr-2"></i>
-                                    Watch How It Works
-                                </span>
-                            </button>
-                        </a>
+                    <!-- Buttons -->
+                    <div class="buttons-animate opacity-0 flex flex-col sm:flex-row gap-6 pt-6">
+                        <button class="group bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center">
+                            <span class="flex items-center">
+                                Book Your Car
+                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-all duration-300"></i>
+                            </span>
+                        </button>
+                        <button class="group px-8 py-4 rounded-xl border-2 border-blue-600 hover:bg-blue-50 transition-all duration-300 relative overflow-hidden hover:scale-105 hover:shadow-2xl">
+                            <div class="absolute inset-0 bg-blue-50 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                            <span class="relative z-10 flex items-center justify-center text-blue-600">
+                                <i class="fas fa-play-circle mr-2"></i>
+                                Watch How It Works
+                            </span>
+                        </button>
                     </div>
                 </div>
 
-                <!-- Image Column and Data Stats Column -->
-                <div class="lg:col-span-7 relative space-y-8">
+                <!-- Image Column -->
+                <div class="image-column lg:col-span-7 relative space-y-8 opacity-0">
                     <div class="relative">
                         <!-- Main Car Image -->
-                        <div class="floating-element relative z-20 transform hover:scale-105 transition-all">
+                        <div class="car-image relative z-20 transform hover:scale-105 transition-all duration-500">
                             <img src="img/car-1.jpg" alt="Luxury Car" class="rounded-2xl shadow-2xl w-full">
                         </div>
 
-                        <!-- Floating Elements -->
-                        <div
-                            class="absolute top-6 -right-4 bg-white p-4 rounded-xl shadow-lg z-30 transform hover:scale-105 transition-transform">
+                        <!-- Floating Cards -->
+                        <div class="status-card absolute top-6 -right-4 bg-white p-4 rounded-xl shadow-lg z-30 transform hover:scale-105 transition-all duration-300">
                             <div class="flex items-center gap-3">
-                                <div class="bg-green-500 w-3 h-3 rounded-full"></div>
+                                <div class="relative">
+                                    <div class="bg-green-500 w-3 h-3 rounded-full"></div>
+                                    <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></div>
+                                </div>
                                 <span class="text-green-500 font-semibold">Available Now</span>
                             </div>
                         </div>
 
-                        <div
-                            class="absolute -bottom-4 left-4 bg-white p-4 rounded-xl shadow-lg z-30 transform hover:scale-105 transition-transform max-w-xs">
+                        <div class="offer-card absolute -bottom-4 left-4 bg-white p-4 rounded-xl shadow-lg z-30 transform hover:scale-105 transition-all duration-300">
                             <div class="flex items-start gap-3">
                                 <div class="bg-blue-600 p-2 rounded-lg">
                                     <i class="fas fa-tag text-white"></i>
                                 </div>
                                 <div>
                                     <div class="text-2xl font-bold text-blue-600">50% OFF</div>
-                                    <div class="text-gray-600">First-time renters special discount</div>
+                                    <div class="text-gray-600">First-time renters special</div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Background Decorative Elements -->
-                        <div
-                            class="absolute -top-10 -right-10 w-40 h-40 bg-blue-200 rounded-full blur-2xl opacity-30 z-10 animate-pulse">
-                        </div>
-                        <div
-                            class="absolute -bottom-10 -left-10 w-40 h-40 bg-indigo-200 rounded-full blur-2xl opacity-30 z-10 animate-pulse">
-                        </div>
                     </div>
+                    
 
-                    <!-- Data Stats -->
-                    <div class="grid grid-cols-3 gap-6 pt-8">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-blue-600">500+</div>
+                    <!-- Stats -->
+                    <div class="stats grid grid-cols-3 gap-6 pt-8">
+                        <div class="stat text-center transform hover:scale-105 transition-all duration-300">
+                            <div class="text-3xl font-bold text-blue-600 counter">500+</div>
                             <div class="text-gray-600 text-sm">Premium Cars</div>
                         </div>
-                        <div class="text-center">
+                        <div class="stat text-center transform hover:scale-105 transition-all duration-300">
                             <div class="text-3xl font-bold text-blue-600">24/7</div>
                             <div class="text-gray-600 text-sm">Support</div>
                         </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-blue-600">99%</div>
+                        <div class="stat text-center transform hover:scale-105 transition-all duration-300">
+                            <div class="text-3xl font-bold text-blue-600 counter">99%</div>
                             <div class="text-gray-600 text-sm">Happy Clients</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-
-    <!-- Benefits Section -->
+        <!-- Benefits Section -->
     <section class="py-20 bg-gradient-to-b from-white to-blue-50">
         <div class="container mx-auto px-4">
             <h2
@@ -270,6 +263,10 @@
             </div>
         </div>
     </section>
+    </section>
+
+
+    
 
     <!-- How It Works Section -->
     <section id="how-it-works" class="py-20 bg-gradient-to-b from-white to-blue-50">
@@ -512,7 +509,7 @@
 
 
 
-    <!--  Footer -->
+    <!-- Enhanced Footer -->
     <footer class="bg-gray-900 text-white py-16">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-12">

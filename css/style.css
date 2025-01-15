@@ -132,3 +132,19 @@ html {
         transform: translate(100px, -100px) rotate(360deg); /* Menggerakkan bentuk dan memutarnya */
     }
 }
+.particle {
+    animation: float 20s infinite linear;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100vw, 100vh);
+    }
+}
+
+.particles .particle:nth-child(1) { animation-duration: 15s; animation-delay: 0s; }
+.particles .particle:nth-child(2) { animation-duration: 25s; animation-delay: -5s; }
+.particles .particle:nth-child(3) { animation-duration: 20s; animation-delay: -10s; }
